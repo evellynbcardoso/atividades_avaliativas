@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenar carcteris</title>
+</head>
+<body>
+    <h1>Ordenar Caracteres</h1>
+    <button onclick="ordenarCaracteres()">Ordenar</button>
+    <div id="resultado"></div>
+
+    <script>
+        function ordenarCaracteres() {
+            let caracterires = [];
+            for (let i = 0; i < 5; i++){
+                caracterires.push(prompt(`Digite o caractere ${i + 1}:`));
+            }
+            caracterires.sort();
+            document.getElementById("resultado").innerHTML = `
+            Sequencia ordenada: ${caracterires.join(",")}
+            `;
+        }
+    </script>
+</body>
+</html>
